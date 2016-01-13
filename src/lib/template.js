@@ -61,10 +61,5 @@ var _defeature = function( mimosaConfig, options, next ) {
 exports.registration = function( mimosaConfig, register ) {
   logger = mimosaConfig.log;
   var exts = mimosaConfig.extensions.template;
-  register(
-    ['add', 'update', 'remove', 'buildExtension'],
-    'afterRead',
-    _defeature,
-    exts
-  );
+  register(['add', 'update', 'remove', 'buildExtension'], 'afterRead', _defeature, exts);
 };
